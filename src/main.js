@@ -8,13 +8,14 @@ var randomCoverButton = document.querySelector(".random-cover-button");
 // var makeNewButton = document.querySelector("make-new-button");
 var coverImage = document.querySelector('.cover-image');
 var coverTitle = document.querySelector('.cover-title');
-// var  = document.querySelector('.tagline');
+var tagline1 = document.querySelector('.tagline-1');
+var tagline2 = document.querySelector('.tagline-2');
 
 // We've provided a few variables below
 var savedCovers = [
   createCover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-// var currentCover;
+var currentCover;
 
 // Add your event listeners here 👇
 
@@ -35,9 +36,13 @@ function randomCoverButtonClick() {
   var title = titles[getRandomIndex(titles)]
   var descriptor1 = descriptors[getRandomIndex(descriptors)]
   var descriptor2 = descriptors[getRandomIndex(descriptors)]
+  
   var cover = createCover(imgSrc, title, descriptor1, descriptor2)
+  
   coverImage.src = cover.coverImg;
   coverTitle.innerText = cover.title;
+  tagline1.innerText = cover.tagline1;
+  tagline2.innerText = cover.tagline2;
   // study line 21 on left entirely 
   }
 
@@ -55,8 +60,8 @@ function makeNewButtonClick() {
 
 
 // We've provided two functions to get you started
-function getRandomIndex(arrays) {
-  return Math.floor(Math.random() * arrays.length);
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
 
 function createCover(imgSrc, title, descriptor1, descriptor2) {
