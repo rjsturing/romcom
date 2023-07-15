@@ -1,7 +1,6 @@
 // Create variables targetting the relevant DOM elements here 👇
 // Should I add Id's to these elements and target element id's instead?
 
-<<<<<<< HEAD
 //buttons
 var homeButton = document.querySelector(".home-button"); 
 var randomCoverButton = document.querySelector(".random-cover-button"); 
@@ -10,25 +9,15 @@ var viewSavedButton = document.querySelector(".view-saved-button");
 var makeNewButton = document.querySelector(".make-new-button");
 
 //book elements
-=======
-// var homeButton = document.querySelector(".home-button"); 
-var randomCoverButton = document.querySelector(".random-cover-button"); 
-// var saveCoverButton = document.querySelector("save-cover-button");
-// var viewSavedButton = document.querySelector("view-saved-button");
-// var makeNewButton = document.querySelector("make-new-button");
->>>>>>> 2ad891c172a6edf050f0c0ffb8fdc3be844f48d8
 var coverImage = document.querySelector('.cover-image');
 var coverTitle = document.querySelector('.cover-title');
 var tagline1 = document.querySelector('.tagline-1');
 var tagline2 = document.querySelector('.tagline-2');
-<<<<<<< HEAD
 
 //views
 var homePage = document.querySelector(".home-view");
 var viewFormView = document.querySelector(".form-view");
 var viewSavedCovers = document.querySelector(".saved-view");
-=======
->>>>>>> 2ad891c172a6edf050f0c0ffb8fdc3be844f48d8
 
 // We've provided a few variables below
 var savedCovers = [
@@ -38,7 +27,6 @@ var savedCovers = [
 
 // Add your event listeners here 👇
 
-<<<<<<< HEAD
 homeButton.addEventListener("click", homeButtonClick);
 randomCoverButton.addEventListener("click", randomCoverButtonClick);
 saveCoverButton.addEventListener("click", saveCoverButtonClick);
@@ -49,46 +37,8 @@ window.addEventListener("load", function() {
   // makeRandomCover(); // Upating the Data Model
   // renderCurrentCover(); // Updating the DOM
 });
-=======
-// homeButton.addEventListener("click", homeButtonClick)
-randomCoverButton.addEventListener("click", randomCoverButtonClick)
-// saveCoverButton.addEventListener("click", saveCoverButtonClick)
-// viewSavedButton.addEventListener("click", viewSavedButtonClick)
-// makeNewButton.addEventListener("click", makeNewButtonClick)
->>>>>>> 2ad891c172a6edf050f0c0ffb8fdc3be844f48d8
 
 // Create your event handlers and other functions here 👇
-
-// function homeButtonClick() {
-
-// }
-
-function randomCoverButtonClick() {
-  var imgSrc = covers[getRandomIndex(covers)]
-  var title = titles[getRandomIndex(titles)]
-  var descriptor1 = descriptors[getRandomIndex(descriptors)]
-  var descriptor2 = descriptors[getRandomIndex(descriptors)]
-  
-  var cover = createCover(imgSrc, title, descriptor1, descriptor2)
-  
-  coverImage.src = cover.coverImg;
-  coverTitle.innerText = cover.title;
-  tagline1.innerText = cover.tagline1;
-  tagline2.innerText = cover.tagline2;
-  // study line 21 on left entirely 
-  }
-
-function saveCoverButtonClick() {
-
-}
-
-function viewSavedButtonClick() {
-
-}
-
-function makeNewButtonClick() {
-
-}
 
 
 function randomCoverButtonClick() {
