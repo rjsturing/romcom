@@ -47,10 +47,10 @@ window.addEventListener("load", function() {
   // renderCurrentCover(); // Updating the DOM
 });
 
-// Create your event handlers and other functions here 
-👇
+// Create your event handlers and other functions here 👇
 
 function saveCoverButtonClick() {
+
   var saveCover = createCover(coverImage.src, coverTitle.innerText, tagline1.innerText, tagline2.innerText)
   savedCovers.push(saveCover)
 }
@@ -129,12 +129,30 @@ function displayHomePage() {
   homeButton.classList.add("hidden");
 
   homePage.classList.remove("hidden");
+
 }
 
 function renderUserCreatedCover(cover) {
   renderCover(cover)
 }
 
+
+function createNewBook(event) {
+  event.preventDefault()
+  var newUserCover = createCover(
+    userCover.value,
+    userTitle.value,
+    desc1.value,
+    desc2.value
+  )
+  saveUserInput(newUserCover); 
+  displayHomePage();
+  renderUserCreatedCover(newUserCover);
+}
+
+function saveUserInput(cover) {
+  covers.push(cover)
+}
 
 function createNewBook(event) {
   event.preventDefault()
@@ -168,3 +186,13 @@ function createCover(imgSrc, title, descriptor1, descriptor2) {
   }
   return cover
 }
+
+// function createCover() {
+//   currentCover = {
+//     id: Date.now()
+//     coverImg: coverInput.value,
+//     title: titleInput.value,
+//     tagline1: tagline1.value, 
+//     tagline2: tagline2.value, 
+//   }; savedCovers.push(currentCover);
+// };
