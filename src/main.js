@@ -38,7 +38,8 @@ window.addEventListener("load", function() {
   // renderCurrentCover(); // Updating the DOM
 });
 
-// Create your event handlers and other functions here 👇
+// Create your event handlers and other functions here 
+👇
 
 
 function randomCoverButtonClick() {
