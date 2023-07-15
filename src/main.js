@@ -50,11 +50,9 @@ window.addEventListener("load", function() {
 // Create your event handlers and other functions here 👇
 
 function saveCoverButtonClick() {
-  console.log("hello")
+
   var saveCover = createCover(coverImage.src, coverTitle.innerText, tagline1.innerText, tagline2.innerText)
-  console.log(saveCover)
   savedCovers.push(saveCover)
-  console.log(savedCovers)
 }
 
 function randomCoverButtonClick() {
@@ -131,12 +129,30 @@ function displayHomePage() {
   homeButton.classList.add("hidden");
 
   homePage.classList.remove("hidden");
+
 }
 
 function renderUserCreatedCover(cover) {
   renderCover(cover)
 }
 
+
+function createNewBook(event) {
+  event.preventDefault()
+  var newUserCover = createCover(
+    userCover.value,
+    userTitle.value,
+    desc1.value,
+    desc2.value
+  )
+  saveUserInput(newUserCover); 
+  displayHomePage();
+  renderUserCreatedCover(newUserCover);
+}
+
+function saveUserInput(cover) {
+  covers.push(cover)
+}
 
 function createNewBook(event) {
   event.preventDefault()
