@@ -136,24 +136,6 @@ function renderUserCreatedCover(cover) {
   renderCover(cover)
 }
 
-
-function createNewBook(event) {
-  event.preventDefault()
-  var newUserCover = createCover(
-    userCover.value,
-    userTitle.value,
-    desc1.value,
-    desc2.value
-  )
-  saveUserInput(newUserCover); 
-  displayHomePage();
-  renderUserCreatedCover(newUserCover);
-}
-
-function saveUserInput(cover) {
-  covers.push(cover)
-}
-
 function createNewBook(event) {
   event.preventDefault()
   var newUserCover = createCover(
@@ -186,13 +168,3 @@ function createCover(imgSrc, title, descriptor1, descriptor2) {
   }
   return cover
 }
-
-// function createCover() {
-//   currentCover = {
-//     id: Date.now()
-//     coverImg: coverInput.value,
-//     title: titleInput.value,
-//     tagline1: tagline1.value, 
-//     tagline2: tagline2.value, 
-//   }; savedCovers.push(currentCover);
-// };
