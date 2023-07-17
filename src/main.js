@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-// Create variables targetting the relevant DOM elements here :point_down:
+/ Create variables targetting the relevant DOM elements here :point_down:
 var homeButton = document.querySelector(".home-button");
 var randomCoverButton = document.querySelector(".random-cover-button");
-=======
-// Create variables targetting the relevant DOM elements here 👇
-var homeButton = document.querySelector(".home-button"); 
-var randomCoverButton = document.querySelector(".random-cover-button"); 
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 var saveCoverButton = document.querySelector(".save-cover-button");
 var viewSavedButton = document.querySelector(".view-saved-button");
 var makeNewButton = document.querySelector(".make-new-button");
@@ -25,20 +19,11 @@ var tagline2 = document.querySelector('.tagline-2');
 var homePage = document.querySelector(".home-view");
 var viewFormView = document.querySelector(".form-view");
 var viewSavedCovers = document.querySelector(".saved-view");
-<<<<<<< HEAD
-=======
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 var savedCovers = [
   createCover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
 var currentCover;
-<<<<<<< HEAD
 // Add your event listeners here :point_down:
-=======
-
-// Add your event listeners here 👇
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 homeButton.addEventListener("click", homeButtonClick);
 randomCoverButton.addEventListener("click", randomCoverButtonClick);
 saveCoverButton.addEventListener("click", saveCoverButtonClick);
@@ -46,13 +31,7 @@ viewSavedButton.addEventListener("click", viewSavedButtonClick);
 makeNewButton.addEventListener("click", makeNewButtonClick);
 createNewBookButton.addEventListener("click", createNewBook)
 viewSavedCovers.addEventListener("dblclick", deleteSavedCover);
-<<<<<<< HEAD
 // Create your event handlers and other functions here :point_down:
-=======
-
-
-// Create your event handlers and other functions here 👇
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 function randomCoverButtonClick() {
   var imgSrc = covers[getRandomIndex(covers)]
   var title = titles[getRandomIndex(titles)]
@@ -86,10 +65,6 @@ function viewSavedButtonClick() {
   viewSavedCovers.classList.remove("hidden")
   displaySavedCovers();
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 function makeNewButtonClick() {
   viewFormView.classList.remove("hidden");
   homePage.classList.add("hidden");
@@ -99,15 +74,8 @@ function makeNewButtonClick() {
   viewSavedButton.classList.remove("hidden");
   viewSavedCovers.classList.add("hidden");
 }
-<<<<<<< HEAD
 function displaySavedCovers() {
   viewSavedCovers.innerHTML = "";
-=======
-
-function displaySavedCovers() {
-  viewSavedCovers.innerHTML = "";
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
   if (savedCovers.length === 0) {
     viewSavedCovers.innerHTML = "<p>No saved covers found.</p>";
   } else {
@@ -123,10 +91,6 @@ function displaySavedCovers() {
     }
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 function createNewBook(event) {
   event.preventDefault()
   var newUserCover = createCover(
@@ -139,15 +103,8 @@ function createNewBook(event) {
   homeButtonClick();
   renderCover(newUserCover);
 }
-<<<<<<< HEAD
 function saveCoverButtonClick() {
   var saveCover = createCover(coverImage.src, coverTitle.innerText, tagline1.innerText, tagline2.innerText);
-=======
-
-function saveCoverButtonClick() {
-  var saveCover = createCover(coverImage.src, coverTitle.innerText, tagline1.innerText, tagline2.innerText);
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
   var isDuplicate = savedCovers.some(function(cover) {
     return (
       cover.coverImg === saveCover.coverImg &&
@@ -156,10 +113,6 @@ function saveCoverButtonClick() {
       cover.tagline2 === saveCover.tagline2
     );
   });
-<<<<<<< HEAD
-=======
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
   if (!isDuplicate) {
     savedCovers.push(saveCover);
   }
@@ -175,10 +128,6 @@ function deleteSavedCover(event) {
     }
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8efb738cea4e8147aa7f935120a4ea622e35f1d5
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
