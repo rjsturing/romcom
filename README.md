@@ -35,6 +35,6 @@ Learning goals of this project were to gain understanding of the code we were im
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
 
 1st win is getting iteration 0-4 done! Big ups on getting it completed.
-2nd win was having a good partner going into this. Though we both don’t fully get how some of the code works we understand the principle as well as the end goal of what each feature should be doing and behaving like.
+2nd win was having a good partner going into this. Though we both don't fully get how some of the code works we understand the principle as well as the end goal of what each feature should be doing and behaving like.
 3rd win learning how to lean into my resources for guidance as well as gaining better traction on self learning.
-Challenges faced were having to learn new JavaScript you can’t full wrap your head around and then applying it right after. As well as the ability to speak to it and explain it to others to make it make sense.
+Challenges faced were having to learn new JavaScript you can't full wrap your head around and then applying it right after. As well as the ability to speak to it and explain it to others to make it make sense.
