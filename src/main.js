@@ -1,4 +1,4 @@
-/ Create variables targetting the relevant DOM elements here :point_down:
+// Create variables targetting the relevant DOM elements here :point_down:
 var homeButton = document.querySelector(".home-button");
 var randomCoverButton = document.querySelector(".random-cover-button");
 var saveCoverButton = document.querySelector(".save-cover-button");
